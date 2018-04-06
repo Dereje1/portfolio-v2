@@ -1,0 +1,599 @@
+body {
+  background: white;
+  overflow-y: scroll;
+}
+
+body #Holder.extended {
+  display: flex;
+  flex-direction: row;
+}
+
+body #Holder #menu.collapsed {
+  background: #dcdcf4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body #Holder #menu.collapsed .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+body #Holder #menu.collapsed .contents .name {
+  margin: auto 0;
+  text-align: center;
+  color: #49274a;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+
+body #Holder #menu.collapsed .contents .minor {
+  text-align: center;
+  color: #49274a;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+body #Holder .scroller {
+  position: fixed;
+  animation: scrollShow 0.75s linear 1;
+  bottom: 2px;
+  right: 2px;
+  font-size: 10vh;
+  color: #49274a;
+  cursor: pointer;
+}
+
+@keyframes scrollShow {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+body #Holder #content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url("https://dereje1.github.io/portfolio-v2/images/contentbackground.png");
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  background-repeat: repeat;
+  background-position: center center;
+  /* optional, center the image */
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
+}
+
+body #Holder #content.top {
+  padding-top: 100px;
+}
+
+body #Holder #content h1 {
+  visibility: visible;
+}
+
+body #Holder #content .sectiondiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: #49274a;
+  color: White;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3vh;
+  margin-bottom: 1px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body #Holder #content .sectiondiv:hover {
+  color: #dde49e;
+}
+
+body #Holder #content .containers {
+  background: rgba(206, 206, 206, 0.2);
+  margin: auto;
+  padding: 0%;
+  width: 100%;
+}
+
+body #Holder #content #containAbout {
+  display: flex;
+  justify-content: center;
+}
+
+body #Holder #content #containAbout .aboutHolder {
+  animation: aboutzoomer .5s ease-in 1;
+  width: 80%;
+  height: auto;
+  overflow-y: hidden;
+  border-radius: 0.5vw;
+  margin-top: 1.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 5%;
+  padding: 1.5%;
+  background: white;
+  box-shadow: 1vw 0.5vh 0.5vw grey;
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 1025px) {
+  body #Holder #content #containAbout .aboutHolder {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body #Holder #content #containAbout .aboutHolder {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes aboutzoomer {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body #Holder #content #containProjects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body #Holder #content #containProjects .filterbuttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+body #Holder #content #containProjects .filterbuttons button {
+  margin: 2px;
+  border: none;
+  outline: 0;
+  font-size: 1.5em;
+  background: #dcdcf4;
+  color: black;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+body #Holder #content #containProjects .filterbuttons button.selected {
+  background: #49274a;
+  color: white;
+  border: none;
+}
+
+body #Holder #content #containProjects .filterbuttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 1vw 0.5vh 0.5vw grey;
+}
+
+body #Holder #content #containProjects #holdprojects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body #Holder #content #containProjects #holdprojects .project {
+  width: 31%;
+  margin-top: 1.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 5%;
+  height: 400px;
+  overflow-y: hidden;
+  border-radius: 0.5vw;
+  /*overview settings*/
+  /*detail settings*/
+}
+
+@media screen and (max-width: 1025px) {
+  body #Holder #content #containProjects #holdprojects .project {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body #Holder #content #containProjects #holdprojects .project {
+    width: 95%;
+  }
+}
+
+body #Holder #content #containProjects #holdprojects .project.overview {
+  animation-name: projectOverview;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1vw 0.5vh 0.5vw grey;
+}
+
+body #Holder #content #containProjects #holdprojects .project.detail {
+  /*
+        animation-name: projectDetail;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        */
+  animation: projectDetail 0.5s linear 1;
+  -webkit-animation: projectDetail 0.5s linear 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 1vw 0.5vh 0.5vw #4c2708;
+}
+
+body #Holder #content #containProjects #holdprojects .project.detail a {
+  color: #49274a;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: 60%;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc {
+  width: 100%;
+  height: 35%;
+  padding: 5px;
+  /*border: 1px solid black;*/
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc .projtitle {
+  display: flex;
+  justify-content: space-between;
+  color: #49274a;
+  font-size: 200%;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc .projtitle i {
+  cursor: pointer;
+  font-size: 35px;
+  margin-right: 10px;
+  margin-top: 3px;
+  color: #d94141;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc .divider {
+  height: 1px;
+  margin: 0;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc .iconholder {
+  display: flex;
+  justify-content: space-around;
+}
+
+body #Holder #content #containProjects #holdprojects .project .projdesc .iconholder .summaryicons {
+  max-width: 15vw;
+  max-height: 6rem;
+  margin: 2%;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailtop {
+  width: 90%;
+  margin: auto;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailtop.title {
+  color: #4c2708;
+  font-family: 'Graduate', cursive;
+  font-size: 120%m;
+  font-weight: 900;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailtop i {
+  cursor: pointer;
+  font-size: 2em;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 25px;
+  color: red;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailbody {
+  margin-top: 10%;
+  height: 50%;
+  width: 90%;
+  font-family: 'Graduate', cursive;
+  font-size: 100%;
+}
+
+body #Holder #content #containProjects #holdprojects .project .divider {
+  height: 1px;
+  margin: 0;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailbottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4%;
+  width: 100%;
+  height: 20%;
+  font-size: 4em;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailbottom i {
+  cursor: pointer;
+}
+
+body #Holder #content #containProjects #holdprojects .project .detailbottom .hosting {
+  font-size: 10px;
+  text-align: left;
+  margin: 5%;
+  color: #618462;
+}
+
+@keyframes projectOverview {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes projectDetail {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes projectDetail {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body #Holder #content #containSkills .skillholder {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 90%;
+  background: white;
+  box-shadow: 1vw 1vh 0.5vw grey;
+  border-radius: .5%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+body #Holder #content #containSkills .skillholder .title {
+  text-align: left;
+  margin-left: 5%;
+  color: #49274a;
+  font-size: 3rem;
+}
+
+body #Holder #content #containSkills .skillholder .divider {
+  height: 1px;
+  margin: 0;
+}
+
+body #Holder #content #containSkills .skillholder .alliconholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+body #Holder #content #containSkills .skillholder .alliconholder .figflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
+  display: block;
+  max-height: 14rem;
+  margin: 2%;
+}
+
+@media screen and (max-width: 900px) {
+  body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
+    max-height: 12rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
+    max-height: 5rem;
+  }
+}
+
+body #Holder #content #containSkills .skillholder .alliconholder figcaption {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  body #Holder #content #containSkills .skillholder .alliconholder figcaption {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body #Holder #content #containSkills .skillholder .alliconholder figcaption {
+    font-size: 1.2rem;
+  }
+}
+
+body #Holder #content #containEducation {
+  font-size: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+body #Holder #content #containEducation .schools {
+  width: 31%;
+  margin-top: 1.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 5%;
+  height: 30rem;
+  overflow-y: hidden;
+  border-radius: 0.5vw;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-shadow: 1vw 0.5vh 0.5vw grey;
+  padding: 1.5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1025px) {
+  body #Holder #content #containEducation .schools {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body #Holder #content #containEducation .schools {
+    width: 95%;
+  }
+}
+
+body #Holder #content #containEducation .schools .schooltitle {
+  color: #49274a;
+  font-size: 125%;
+}
+
+body #Holder #content #containEducation .schools .locdate {
+  color: brown;
+  font-size: 100%;
+}
+
+body #Holder #content #containEducation .schools .field {
+  font-size: 100%;
+}
+
+body #Holder #content #containContact {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  height: 1000px;
+}
+
+body #Holder #content #containContact .contactHolder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #49274a;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+body #Holder #content #containContact .contactHolder i {
+  margin-right: 10px;
+  font-size: 50px;
+}
+
+body #Holder #content #containContact .contactHolder .contactdetail {
+  margin: auto 0;
+  font-size: 25px;
+  color: #49274a;
+}
+
+body #Holder #content #copyright {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2px;
+}
+
+@keyframes test {
+  0% {
+    max-height: 0px;
+  }
+  50% {
+    max-height: 50%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}

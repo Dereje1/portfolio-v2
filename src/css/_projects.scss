@@ -1,0 +1,220 @@
+ // main: style.scss
+
+#containProjects{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  .filterbuttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    button {
+      margin: 2px;
+      border: none;
+      outline: 0;
+      font-size: 1.5em;
+      background: #dcdcf4;
+      color: black;
+      cursor: pointer;
+      border-radius: 3px;
+      &.selected{
+        background: #49274a;
+        color: white;
+        border: none;
+      }
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 1vw 0.5vh 0.5vw grey;
+      }
+    }
+  }
+  #holdprojects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .project{
+      width:31%;
+      @media screen and (max-width: 1025px){
+        width:45%;
+      }
+      @media screen and (max-width: 600px){
+        width:95%;
+      }
+      margin-top:1.5%;
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-bottom: 5%;
+      height:400px;
+      overflow-y:hidden;
+      border-radius: 0.5vw;
+      &.overview{
+
+        animation-name: projectOverview;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+
+        background: white;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 1vw 0.5vh 0.5vw grey;
+      }
+      &.detail{
+        /*
+        animation-name: projectDetail;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        */
+        animation: projectDetail 0.5s linear 1;
+        -webkit-animation: projectDetail 0.5s linear 1;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 1vw 0.5vh 0.5vw #4c2708;
+        a{
+          color: #49274a;
+        }
+      }
+      /*overview settings*/
+      .projimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        max-width:100%;
+        height:60%;
+      }
+      .projdesc{
+        width: 100%;
+        height:35%;
+        padding: 5px;
+        /*border: 1px solid black;*/
+        .projtitle{
+          display: flex;
+          justify-content: space-between;
+          color:#49274a;
+          font-size: 200%;
+          font-family: 'Comfortaa', cursive;
+          font-weight:bold;
+          i{
+            cursor: pointer;
+            font-size: 35px;
+            margin-right: 10px;
+            margin-top: 3px;
+            color:#d94141;
+          }
+        }
+        .divider{
+          height: 1px;
+          margin: 0;
+        }
+        .iconholder{
+          display: flex;
+          justify-content: space-around;
+          .summaryicons{
+            max-width:15vw;
+            max-height: 6rem;
+            margin:2%;
+
+          }
+        }
+
+      }
+      /*detail settings*/
+      .detailtop{
+        width: 90%;
+        margin: auto;
+        height: 15%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+          &.title{
+            color:#4c2708;
+            font-family: 'Graduate', cursive;
+            font-size: 120%m;
+            font-weight: 900;
+          }
+          i{
+            cursor: pointer;
+            font-size: 2em;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 25px;
+            color: red;
+          }
+        }
+      .detailbody{
+        margin-top: 10%;
+        height: 50%;
+        width: 90%;
+        font-family: 'Graduate', cursive;
+        font-size: 100%;
+      }
+      .divider{
+        height: 1px;
+        margin: 0;
+      }
+      .detailbottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:4%;
+        width: 100%;
+        height: 20%;
+        font-size: 4em;
+        i{
+          cursor: pointer;
+        }
+        .hosting{
+          font-size: 10px;
+          text-align: left;
+          margin: 5%;
+          color: #618462;
+        }
+      }
+
+    }
+  }
+}
+
+
+@keyframes projectOverview {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes projectDetail {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes projectDetail {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

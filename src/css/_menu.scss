@@ -1,0 +1,56 @@
+// main: style.scss
+#menu{
+  &.collapsed{
+    background: #dcdcf4;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    & .contents{
+        display: flex;
+        flex-direction: column;
+      & .name{
+        margin: auto 0;
+        text-align: center;
+        color:#49274a;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4.5rem;
+        font-weight: 900;
+      }
+    & .minor{
+      text-align: center;
+      color:#49274a;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    }
+  }
+}
+
+.scroller{
+
+  position: fixed;
+  animation: scrollShow 0.75s linear 1;
+  bottom: 2px;
+  right: 2px;
+  font-size: 10vh;
+  color: #49274a;
+  cursor: pointer;
+}
+
+@keyframes scrollShow {
+  0%{
+    transform: rotate(0deg) scale(0);
+  }
+  50%{
+    transform: rotate(180deg) scale(0.5);
+  }
+  100%{
+    transform: rotate(360deg) scale(1);
+  }
+}
