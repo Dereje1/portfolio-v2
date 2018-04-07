@@ -19,5 +19,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://dereje1.github.io/cra-portfolio"
+  "homepage": "https://dereje1.github.io/portfolio-v2"
 }
