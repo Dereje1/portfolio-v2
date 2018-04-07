@@ -68,7 +68,7 @@ body #Holder #content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url("https://dereje1.github.io/portfolio-v2/images/contentbackground.png");
+  background-image: url("/images/contentbackground.png");
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
   background-repeat: repeat;
