@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 
-import Menu from './menu'
+import Menu from './menu';
 
 class App extends Component {
-  mquery(){
+  mquery() {
     return (
       <MediaQuery maxWidth={2000}>
-         {
-           (mat) => {return <Menu collapsed={mat}/>;}
-         }
+        {mat => {
+          return <Menu collapsed={mat} />;
+        }}
       </MediaQuery>
-    )
+    );
   }
   render() {
-    return this.mquery()
+    return this.mquery();
   }
 }
 
