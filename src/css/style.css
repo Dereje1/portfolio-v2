@@ -130,7 +130,7 @@ body #Holder #content #containAbout {
 }
 
 body #Holder #content #containAbout .aboutHolder {
-  animation: aboutzoomer .5s ease-in 1;
+  animation: aboutzoomer 0.5s ease-in 1;
   width: 80%;
   height: auto;
   overflow-y: hidden;
@@ -216,7 +216,7 @@ body #Holder #content #containProjects #holdprojects {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 body #Holder #content #containProjects #holdprojects .project {
@@ -430,7 +430,7 @@ body #Holder #content #containSkills .skillholder {
   width: 90%;
   background: white;
   box-shadow: 1vw 1vh 0.5vw grey;
-  border-radius: .5%;
+  border-radius: 0.5%;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
 }
@@ -474,7 +474,8 @@ body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
 
 @media screen and (max-width: 700px) {
   body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
-    max-height: 5rem;
+    max-height: 6rem;
+    max-width: 90%;
   }
 }
 
@@ -597,3 +598,4 @@ body #Holder #content #copyright {
     max-height: 100%;
   }
 }
+/*# sourceMappingURL=style.css.map */

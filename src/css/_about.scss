@@ -1,16 +1,16 @@
 // main: style.scss
-#containAbout{
+#containAbout {
   display: flex;
   justify-content: center;
 
-  .aboutHolder{
-    animation: aboutzoomer .5s ease-in 1;
-    width:80%;
-    height:auto;
-    overflow-y:hidden;
+  .aboutHolder {
+    animation: aboutzoomer 0.5s ease-in 1;
+    width: 80%;
+    height: auto;
+    overflow-y: hidden;
     border-radius: 0.5vw;
 
-    margin-top:1.5%;
+    margin-top: 1.5%;
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 5%;
@@ -21,30 +21,29 @@
 
     font-family: 'Roboto Slab', serif;
     font-size: 3rem;
-    @media screen and (max-width: 1025px){
+    @media screen and (max-width: 1025px) {
       font-size: 2rem;
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       font-size: 1.5rem;
     }
-
   }
 }
 
 @keyframes aboutzoomer {
-  0%{
+  0% {
     transform: scale(0);
   }
-  25%{
+  25% {
     transform: scale(0.25);
   }
-  50%{
+  50% {
     transform: scale(0.5);
   }
-  75%{
+  75% {
     transform: scale(0.75);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }

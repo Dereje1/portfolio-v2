@@ -1,22 +1,21 @@
 // main: style.scss
-#containContact{
+#containContact {
   display: flex;
   flex-direction: column;
-  padding:5%;
-  height:1000px;
-  .contactHolder{
+  padding: 5%;
+  height: 1000px;
+  .contactHolder {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color:#49274a;
-    height:50px;
+    color: #49274a;
+    height: 50px;
     margin-bottom: 5px;
-    i{
-
+    i {
       margin-right: 10px;
       font-size: 50px;
     }
-    .contactdetail{
+    .contactdetail {
       margin: auto 0;
       font-size: 25px;
       color: #49274a;
