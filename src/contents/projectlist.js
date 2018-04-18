@@ -9,10 +9,12 @@ export const projectList = [
     imgLink: './images/projects/cuteornot.png',
     summary: 'A chingu collaborative app that enables uploading and voting of pets.',
     details: [
-      'Currency price data generated every 15 minutes from AWS EC2 instance running MT4 (Oanda quotes)',
-      'High Impact News Data retrieved from forex factory',
-      'Node server processes Price and News data and delivers JSON to frontend for consumption with react'
-    ],
+      'Uses Git / Github collaboration among 4 remote team members ',
+      'Allows for multiple social media authentication services ',
+      'Uses Enzyme for preliminary front end testing',
+      'Stores uploaded pictures with an external service',
+      'Uses Create React App'
+        ],
     projectLink: 'https://cuteornotapp.herokuapp.com/',
     githubLink: 'https://github.com/chingu-voyage4/Bears-Team-23',
     tags: ['Full Stack', 'React'],
@@ -165,7 +167,7 @@ export const projectList = [
     details: [
       'Enter any URL and get a JSON response with the Shortened Link',
       'If A link is already shortened, API will not shorten again',
-      'stores shortened link using mongoDB',
+      'stores shortened link using mongodb',
       'Parses URL for validity'
     ],
     projectLink: 'https://shorten-my-link.glitch.me/',

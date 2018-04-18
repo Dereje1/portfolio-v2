@@ -8,52 +8,6 @@ class Skills extends Component {
     return (
       <div id="containSkills" className="containers">
         <div className="skillholder">
-          <p className="title">Primary Focus</p>
-          <hr className="divider" />
-          <div className="alliconholder">
-            <figure className="figflex">
-              <img
-                className="skillicons"
-                src="./images/icons/javascript.png"
-                alt=""
-              />
-              <figcaption>JavaScript</figcaption>
-            </figure>
-            <figure className="figflex">
-              <img
-                className="skillicons"
-                src="./images/icons/mongodb.png"
-                alt=""
-              />
-              <figcaption>mongoDB</figcaption>
-            </figure>
-            <figure className="figflex">
-              <img
-                className="skillicons"
-                src="./images/icons/express.png"
-                alt=""
-              />
-              <figcaption>Express</figcaption>
-            </figure>
-            <figure className="figflex">
-              <img
-                className="skillicons"
-                src="./images/icons/react.png"
-                alt=""
-              />
-              <figcaption>React</figcaption>
-            </figure>
-            <figure className="figflex">
-              <img
-                className="skillicons"
-                src="./images/icons/nodejs.png"
-                alt=""
-              />
-              <figcaption>Node.js</figcaption>
-            </figure>
-          </div>
-        </div>
-        <div className="skillholder">
           <p className="title">Front End Tools</p>
           <hr className="divider" />
           <div className="alliconholder">

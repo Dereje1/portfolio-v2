@@ -36,7 +36,7 @@ class Projects extends Component {
     const allIcons = iconList.map((i, idx) => {
       let iconLink = './images/icons/' + i + '.png';
       return (
-        <img key={pid + idx} className="summaryicons" src={iconLink} alt={i} />
+        <img key={pid + idx} className="summaryicons" src={iconLink} alt={i} title={i}/>
       );
     });
     return <div className="iconholder">{allIcons}</div>;

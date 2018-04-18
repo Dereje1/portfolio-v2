@@ -49,8 +49,6 @@ body #Holder .scroller {
   right: 2px;
   font-size: 10vh;
   color: #49274a;
-  background: white;
-  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -70,7 +68,7 @@ body #Holder #content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url('../contentbackground.png');
+  background-image: url("../contentbackground.png");
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
   background-repeat: repeat;
@@ -218,7 +216,7 @@ body #Holder #content #containProjects #holdprojects {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 body #Holder #content #containProjects #holdprojects .project {
@@ -293,14 +291,7 @@ body #Holder #content #containProjects #holdprojects .project .projdesc {
   /*border: 1px solid black;*/
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .projdesc
-  .projtitle {
+body #Holder #content #containProjects #holdprojects .project .projdesc .projtitle {
   display: flex;
   justify-content: space-between;
   color: #49274a;
@@ -309,15 +300,7 @@ body
   font-weight: bold;
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .projdesc
-  .projtitle
-  i {
+body #Holder #content #containProjects #holdprojects .project .projdesc .projtitle i {
   cursor: pointer;
   font-size: 35px;
   margin-right: 10px;
@@ -325,39 +308,17 @@ body
   color: #d94141;
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .projdesc
-  .divider {
+body #Holder #content #containProjects #holdprojects .project .projdesc .divider {
   height: 1px;
   margin: 0;
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .projdesc
-  .iconholder {
+body #Holder #content #containProjects #holdprojects .project .projdesc .iconholder {
   display: flex;
   justify-content: space-around;
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .projdesc
-  .iconholder
-  .summaryicons {
+body #Holder #content #containProjects #holdprojects .project .projdesc .iconholder .summaryicons {
   max-width: 15vw;
   max-height: 6rem;
   margin: 2%;
@@ -415,14 +376,7 @@ body #Holder #content #containProjects #holdprojects .project .detailbottom i {
   cursor: pointer;
 }
 
-body
-  #Holder
-  #content
-  #containProjects
-  #holdprojects
-  .project
-  .detailbottom
-  .hosting {
+body #Holder #content #containProjects #holdprojects .project .detailbottom .hosting {
   font-size: 10px;
   text-align: left;
   margin: 5%;
@@ -520,7 +474,8 @@ body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
 
 @media screen and (max-width: 700px) {
   body #Holder #content #containSkills .skillholder .alliconholder .skillicons {
-    max-height: 5rem;
+    max-height: 6rem;
+    max-width: 90%;
   }
 }
 
@@ -643,3 +598,4 @@ body #Holder #content #copyright {
     max-height: 100%;
   }
 }
+/*# sourceMappingURL=style.css.map */
