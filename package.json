@@ -15,7 +15,7 @@
     "react-scroll": "^1.7.6"
   },
   "lint-staged": {
-      "src/**/*.{js,jsx,json,css}": [
+      "src/**/*.{js,jsx,json,css,scss}": [
       "prettier --single-quote --write",
       "git add"
       ]

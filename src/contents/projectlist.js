@@ -4,6 +4,22 @@ const hostingMessageHeroku =
   'Demo hosted on free tier of heroku.com and may take up to 30 seconds to wake up';
 export const projectList = [
   {
+    id: 'pn2',
+    title: 'Cute or Not',
+    imgLink: './images/projects/cuteornot.png',
+    summary: 'A chingu collaborative app that enables uploading and voting of pets.',
+    details: [
+      'Currency price data generated every 15 minutes from AWS EC2 instance running MT4 (Oanda quotes)',
+      'High Impact News Data retrieved from forex factory',
+      'Node server processes Price and News data and delivers JSON to frontend for consumption with react'
+    ],
+    projectLink: 'https://cuteornotapp.herokuapp.com/',
+    githubLink: 'https://github.com/chingu-voyage4/Bears-Team-23',
+    tags: ['Full Stack', 'React'],
+    icons: ['mongodb','express', 'react', 'nodejs'],
+    hosting: hostingMessageHeroku
+  },
+  {
     id: 'pn1',
     title: 'Relative Strength',
     imgLink: './images/projects/rstrength.png',
