@@ -179,10 +179,13 @@ class Projects extends Component {
 
   render() {
     if (this.props.hidden) {
-      return null;
+      return (
+        <div className="fadeout">
+        </div>
+      );
     }
     return (
-      <div id="containProjects" className="containers">
+      <div id="containProjects" className="fadein">
         {this.generateButtons()}
         <div id="holdprojects">{this.buildProjects()}</div>
       </div>

@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 class Contact extends Component {
   render() {
     if (this.props.hidden) {
-      return null;
+      return (
+        <div className="fadeout">
+        </div>
+      );
     }
     return (
-      <div id="containContact" className="containers">
+      <div id="containContact" className="fadein">
         <span className="contactHolder">
           <i className="fas fa-envelope" />
           <a className="contactdetail" href="mailto:dereje.jobs@gmail.com">

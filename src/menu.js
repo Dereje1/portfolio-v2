@@ -9,7 +9,7 @@ class Menu extends Component {
       scrollDist: 'about',
       lastScrollTime: 0,
       projectFilter: ['Full Stack'],
-      hiddenSection: ['about', 'skills', 'education', 'contact']
+      hiddenSection: ['about','skills', 'education', 'contact']
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.scrollUp = this.scrollUp.bind(this);

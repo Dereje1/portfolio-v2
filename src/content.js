@@ -29,7 +29,7 @@ class Content extends Component {
           : 0;
       var scroller = Scroll.scroller;
       scroller.scrollTo(this.props.scrollpoint, {
-        duration: 1000,
+        duration: 500,
         delay: 100,
         smooth: true,
         spy: true,

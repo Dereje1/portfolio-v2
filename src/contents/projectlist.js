@@ -5,7 +5,7 @@ const hostingMessageHeroku =
 export const projectList = [
   {
     id: 'pn2',
-    title: 'Ring Dog',
+    title: 'Cute or Not',
     imgLink: './images/projects/cuteornot.png',
     summary: 'A chingu collaborative app that enables uploading and voting of pets.',
     details: [

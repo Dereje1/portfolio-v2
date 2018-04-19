@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 class About extends Component {
   render() {
     if (this.props.hidden) {
-      return null;
+      return (
+        <div className="fadeout">
+        </div>
+      );
     }
     return (
-      <div id="containAbout" className="containers">
+      <div id="containAbout" className="fadein">
         <div className="aboutHolder">
           <p>
             Hi, I am Dereje, a formally trained Mechanical Engineer, a
