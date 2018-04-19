@@ -49,8 +49,9 @@ body #Holder .scroller {
   right: 2px;
   font-size: 10vh;
   color: #49274a;
-  background: white;
+  background-color: white;
   border-radius: 50%;
+  line-height: 0%;
   cursor: pointer;
 }
 
@@ -132,7 +133,7 @@ body #Holder #content #containAbout {
 }
 
 body #Holder #content #containAbout .aboutHolder {
-  animation: aboutzoomer 0.25s ease-in 1;
+  animation: aboutzoomer 0.4s ease-in 1;
   width: 80%;
   height: auto;
   overflow-y: hidden;
