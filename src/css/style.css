@@ -114,10 +114,13 @@ body #Holder #content .sectiondiv {
   letter-spacing: 5px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 body #Holder #content .sectiondiv:hover {
-  color: #dde49e;
+  background: rgba(73, 39, 74, 0.35);
+  color: #49274a;
+  transition: 0.5s;
 }
 
 body #Holder #content .containers {
@@ -600,7 +603,7 @@ body #Holder #content #copyright {
 .fadeout {
   height: 0px;
   animation-name: hideblock;
-  animation-duration: .5s;
+  animation-duration: .4s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }

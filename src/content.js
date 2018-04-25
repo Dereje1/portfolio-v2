@@ -47,7 +47,7 @@ class Content extends Component {
           onClick={() => this.props.sectionHide(section)}
         >
           {section}
-          <i className="far fa-arrow-alt-circle-down" />
+          <i className="fa fa-plus-square" aria-hidden="true"/>
         </div>
       );
     } else {
@@ -58,7 +58,7 @@ class Content extends Component {
           onClick={() => this.props.sectionHide(section)}
         >
           {section}
-          <i className="far fa-arrow-alt-circle-up" />
+          <i className="fa fa-minus-square" aria-hidden="true"/>
         </div>
       );
     }

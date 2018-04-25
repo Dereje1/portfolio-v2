@@ -8,6 +8,7 @@ class Menu extends Component {
       addmenu: false,
       scrollDist: 'about',
       lastScrollTime: 0,
+      yScroll: [0,"down"],
       projectFilter: ['Full Stack'],
       hiddenSection: ['about','skills', 'education', 'contact']
     };
@@ -30,9 +31,13 @@ class Menu extends Component {
   }
 
   handleScroll() {
+    const yScrollCopy=[...this.state.yScroll]
+    yScrollCopy[1] =  window.pageYOffset < yScrollCopy[0] ? "up" : "down"
+    yScrollCopy[0] = window.pageYOffset
     this.setState({
       scrollDist: '',
-      lastScrollTime: 0
+      lastScrollTime: 0,
+      yScroll: yScrollCopy
     });
   }
   scrollUp() {
@@ -121,10 +126,7 @@ class Menu extends Component {
     });
   }
   controlScroll() {
-    if (this.state.hiddenSection.length === 5) {
-      return null;
-    }
-    if (this.state.lastScrollTime > 2) {
+    if (this.state.hiddenSection.length === 5 || this.state.lastScrollTime > 2 || this.state.yScroll[1]==="down") {
       return null;
     }
     const scrollerButton = (
