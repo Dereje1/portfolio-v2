@@ -48,10 +48,7 @@ body #Holder .scroller {
   bottom: 2px;
   right: 2px;
   font-size: 10vh;
-  color: #49274a;
-  background-color: white;
-  border-radius: 50%;
-  line-height: 0%;
+  color: #8caf3a;
   cursor: pointer;
 }
 
@@ -121,6 +118,13 @@ body #Holder #content .sectiondiv:hover {
   background: rgba(73, 39, 74, 0.35);
   color: #49274a;
   transition: 0.5s;
+}
+
+@media (hover: none), (hover: on-demand) {
+  body #Holder #content .sectiondiv:hover {
+    background: #49274a;
+    color: white;
+  }
 }
 
 body #Holder #content .containers {

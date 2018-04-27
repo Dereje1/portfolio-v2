@@ -42,6 +42,12 @@
       color: #49274a;
       transition: 0.5s;
     }
+    @media (hover:none), (hover:on-demand) {
+      &:hover{ 
+          background: #49274a;
+          color: white;
+      }
+    }
   }
   .containers {
     background: rgba(206, 206, 206, 0.2);
