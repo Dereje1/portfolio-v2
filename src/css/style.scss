@@ -5,15 +5,22 @@ $widthcutoff: 990px;
 body {
   background: white;
   overflow-y: scroll;
-  #Holder {
-    &.extended {
-      display: flex;
-      flex-direction: row;
-    }
-    @import 'menu';
+  #App {
+    @import 'header';
     @import 'content';
   }
 }
+
+.scroller {
+  position: fixed;
+  animation: scrollShow 0.75s linear 1;
+  bottom: 2px;
+  right: 2px;
+  font-size: 10vh;
+  color: #8caf3a;
+  cursor: pointer;
+}
+
 
 .fadein{
   animation-name: showblock;
@@ -27,6 +34,18 @@ body {
   animation-duration: .4s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
+}
+
+@keyframes scrollShow {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @keyframes showblock {
