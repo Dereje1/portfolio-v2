@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 
 class Scroller extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
 
-        this.scrollUp = this.scrollUp.bind(this)
-    }
-
-    scrollUp() {
-        //must refactor
+    scrollUp = () => {
         const allSections = [
           'containAbout',
           'containProjects',
@@ -22,41 +15,35 @@ class Scroller extends Component {
           return document.getElementById(s);
         });
         if (!expandedSections.length) {
+          //all sections arecollapsed
           return;
-        } //all sections collapsed
-        let filteredSections = expandedSections.filter(section => {
-          //filter out sections outside of viewport
-          let boundingBox = document
+        } 
+        const scrollSection = expandedSections.filter(section => {
+          //filter out last section inside of viewport
+          const boundingBox = document
             .getElementById(section)
             .getBoundingClientRect();
-          let bottom = boundingBox.bottom;
-          let top = boundingBox.top;
-          return !(bottom < 0 || top > window.innerHeight);
-        });
+          return !(boundingBox.bottom < 0 || boundingBox.top > window.innerHeight);
+        }).pop();
     
-        //sometimes there is only one section in viewport if no two sections overlap, always use the last element in array
-        let ans = filteredSections[filteredSections.length - 1]
+        //get section name to send to scroller
+        const sectionName = scrollSection
           .split('contain')[1]
           .toLowerCase();
-    
-        let beforeScrollBounding = document
-          .getElementById(filteredSections[filteredSections.length - 1])
+        //get bounding of section
+        const sectionBounding = document
+          .getElementById(scrollSection)
           .getBoundingClientRect();
-    
-        let contentBox = document.getElementById('content').getBoundingClientRect();
-    
-    
-        if (beforeScrollBounding.top > 200 && beforeScrollBounding.top < 202) {
+          
+        if (sectionBounding.top > 200 && sectionBounding.top < 202) {
           //already scrolled up(100 = section heading height, 75 main header height)
-          this.props.hideByScroller(ans); //if already scrolled up just hide
-        } else if (contentBox.bottom <= window.innerHeight + 1) {
-            this.props.hideByScroller(ans);
+          this.props.hideByScroller(sectionName); //if already scrolled up just hide
         } else {
-            this.props.scrollTo(ans);
+            this.props.scrollTo(sectionName);
         }
       }
 
-    controlScroll() {
+    controlScroll (){
         if (this.props.pageState.hiddenSection.length === 5 || 
             this.props.pageState.lastScrollTime > 2 || 
             this.props.pageState.yScroll[1]==="down") {
@@ -64,7 +51,7 @@ class Scroller extends Component {
         }
         const scrollerButton = (
           <div className="scroller" onClick={this.scrollUp}>
-            <i className="fas fa-arrow-alt-circle-up" />
+            <i className="fas fa-hand-point-up" />
           </div>
         );
     

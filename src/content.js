@@ -10,13 +10,6 @@ import Education from './contents/education';
 import Contact from './contents/contact';
 
 class Content extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeProject: '',
-      projectView: []
-    };
-  }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.scrollpoint !== this.props.scrollpoint) {

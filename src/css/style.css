@@ -568,9 +568,8 @@ body #App #content #copyright {
   animation: scrollShow 0.75s linear 1;
   bottom: 2px;
   right: 2px;
-  font-size: 10vh;
-  color: #8caf3a;
-  cursor: pointer;
+  font-size: 7rem;
+  color: rgba(139, 69, 26, 0.85);
 }
 
 .fadein {

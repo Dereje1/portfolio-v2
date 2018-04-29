@@ -43,7 +43,8 @@ class App extends Component {
 
   scrolltoSection(elem) {
     this.setState({
-      scrollDist: elem
+      scrollDist: elem,
+      lastScrollTime: 0
     });
   }
   hideSection(toHide) {
