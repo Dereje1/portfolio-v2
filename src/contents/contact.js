@@ -17,6 +17,18 @@ class Contact extends Component {
           </a>
         </span>
         <span className="contactHolder">
+          <i className="fas fa-file" aria-hidden="true" />
+          <a
+            className="contactdetail"
+            href="https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            Resume
+          </a>
+        </span>
+        <span className="contactHolder">
           <i className="fab fa-github-square" aria-hidden="true" />
           <a
             className="contactdetail"

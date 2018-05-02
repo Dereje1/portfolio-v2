@@ -531,9 +531,9 @@ body #App #content #containEducation .schools .field {
 
 body #App #content #containContact {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 5%;
-  height: 1000px;
 }
 
 body #App #content #containContact .contactHolder {
