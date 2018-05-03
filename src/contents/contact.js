@@ -17,18 +17,6 @@ class Contact extends Component {
           </a>
         </span>
         <span className="contactHolder">
-          <i className="fas fa-file" aria-hidden="true" />
-          <a
-            className="contactdetail"
-            href="https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            Resume
-          </a>
-        </span>
-        <span className="contactHolder">
           <i className="fab fa-github-square" aria-hidden="true" />
           <a
             className="contactdetail"
@@ -37,7 +25,19 @@ class Contact extends Component {
             rel="noopener noreferrer"
           >
             {' '}
-            github.com/Dereje1
+            github.com
+          </a>
+        </span>
+        <span className="contactHolder">
+          <i className="fab fa-linkedin-in" aria-hidden="true" />
+          <a
+            className="contactdetail"
+            href="https://www.linkedin.com/in/dereje-getahun-447018134"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            linkedin.com
           </a>
         </span>
       </div>

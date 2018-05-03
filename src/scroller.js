@@ -34,13 +34,19 @@ class Scroller extends Component {
         const sectionBounding = document
           .getElementById(scrollSection)
           .getBoundingClientRect();
-          
+        //console.log(sectionName,sectionBounding,window.innerHeight)
         if (sectionBounding.top > 200 && sectionBounding.top < 202) {
           //already scrolled up(100 = section heading height, 75 main header height)
           this.props.hideByScroller(sectionName); //if already scrolled up just hide
-        } else {
-            this.props.scrollTo(sectionName);
-        }
+        } 
+        /* modify more hiding clause below
+        if ((Math.abs(sectionBounding.top) < window.innerHeight)&&(sectionBounding.bottom<window.innerHeight)) {
+          //for closing sections that are already fully visible in viewport
+          this.props.hideByScroller(sectionName); //if already scrolled up just hide
+        } 
+        */
+        this.props.scrollTo(sectionName);
+
       }
 
     controlScroll (){

@@ -30,13 +30,23 @@ class App extends Component {
     clearInterval(this.Interval);
   }
 
+  getScrollDirection = (prevYPos) =>{
+    if(window.pageYOffset < prevYPos){
+      return "up"
+    }
+    if(this.state.lastScrollTime < 2){//just scrolled keep scroller for another 2 secs
+      return "up"
+    }
+    return "down"
+  }
+
   handleScroll() {
     const yScrollCopy=[...this.state.yScroll]
-    yScrollCopy[1] =  window.pageYOffset < yScrollCopy[0] ? "up" : "down"
+    yScrollCopy[1] = this.getScrollDirection(yScrollCopy[0])
     yScrollCopy[0] = window.pageYOffset
     this.setState({
       scrollDist: '',
-      lastScrollTime: 0,
+      lastScrollTime: yScrollCopy[1] === "up" ? 0 : this.state.lastScrollTime,
       yScroll: yScrollCopy
     });
   }

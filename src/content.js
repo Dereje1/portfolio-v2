@@ -32,6 +32,17 @@ class Content extends Component {
   }
 
   sectionHeader(section) {
+    if(section==='resume'){
+      return (
+        <div
+          id={section}
+          className="sectiondiv"
+          onClick={()=>window.open("https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing")}
+        >
+          {section}
+        </div>
+      );
+    }
     if (this.props.hidden.includes(section)) {
       return (
         <div
@@ -82,6 +93,7 @@ class Content extends Component {
         {this.sectionHeader('contact')}
         <Contact hidden={this.props.hidden.includes('contact')} />
 
+        {this.sectionHeader('resume')}
         <p id="copyright">Dereje Getahun {'\u00A9'} 2018</p>
       </div>
     );
