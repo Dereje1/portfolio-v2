@@ -6,14 +6,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      addmenu: false,
       scrollDist: 'about',
       lastScrollTime: 0,
       yScroll: [0,"down"],
       projectFilter: ['Full Stack'],
       hiddenSection: ['about','skills', 'education', 'contact']
     };
-    this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -40,7 +38,7 @@ class App extends Component {
     return "down"
   }
 
-  handleScroll() {
+  handleScroll = () => {
     const yScrollCopy=[...this.state.yScroll]
     yScrollCopy[1] = this.getScrollDirection(yScrollCopy[0])
     yScrollCopy[0] = window.pageYOffset
@@ -100,12 +98,9 @@ class App extends Component {
           <h4 className="minor">Full Stack Web Development Portfolio</h4>
         </div>
         <Content
-          addMargin="top"
-          scrollpoint={this.state.scrollDist}
-          projectFilter={this.state.projectFilter}
+          pageState={this.state}
           filterCallBack={d => this.resetFilter(d)}
           sectionHide={s => this.hideSection(s)}
-          hidden={this.state.hiddenSection}
         />
         <Scroller 
           pageState={this.state} 

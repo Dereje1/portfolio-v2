@@ -12,16 +12,13 @@ import Contact from './contents/contact';
 class Content extends Component {
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.scrollpoint !== this.props.scrollpoint) {
-      if (!this.props.scrollpoint) {
+    if (prevProps.pageState.scrollDist !== this.props.pageState.scrollDist) {
+      if (!this.props.pageState.scrollDist) {
         return;
       }
-      let off =
-        this.props.addMargin === 'top left' || this.props.addMargin === 'top'
-          ? -100
-          : 0;
+      const off = -100 //compenstate for header block
       var scroller = Scroll.scroller;
-      scroller.scrollTo(this.props.scrollpoint, {
+      scroller.scrollTo(this.props.pageState.scrollDist, {
         duration: 500,
         delay: 100,
         smooth: true,
@@ -43,55 +40,43 @@ class Content extends Component {
         </div>
       );
     }
-    if (this.props.hidden.includes(section)) {
-      return (
-        <div
-          id={section}
-          className="sectiondiv"
-          onClick={() => this.props.sectionHide(section)}
-        >
-          {section}
-          <i className="fa fa-plus-square" aria-hidden="true"/>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          id={section}
-          className="sectiondiv"
-          onClick={() => this.props.sectionHide(section)}
-        >
-          {section}
-          <i className="fa fa-minus-square" aria-hidden="true"/>
-        </div>
-      );
-    }
+    return (
+      <div
+        id={section}
+        className="sectiondiv"
+        onClick={() => this.props.sectionHide(section)}
+      >
+        {section}
+        {this.props.pageState.hiddenSection.includes(section) ? 
+        <i className="fa fa-plus-square" aria-hidden="true"/> :
+        <i className="fa fa-minus-square" aria-hidden="true"/>}
+      </div>
+    );
   }
   render() {
     return (
       <div
         id="content"
-        className={this.props.addMargin}
         onClick={this.props.contract}
       >
         {this.sectionHeader('about')}
-        <About hidden={this.props.hidden.includes('about')} />
+        <About hidden={this.props.pageState.hiddenSection.includes('about')} />
 
         {this.sectionHeader('projects')}
         <Projects
-          hidden={this.props.hidden.includes('projects')}
-          projectFilter={this.props.projectFilter}
+          hidden={this.props.pageState.hiddenSection.includes('projects')}
+          projectFilter={this.props.pageState.projectFilter}
           filterCallBack={c => this.props.filterCallBack(c)}
         />
 
         {this.sectionHeader('skills')}
-        <Skills hidden={this.props.hidden.includes('skills')} />
+        <Skills hidden={this.props.pageState.hiddenSection.includes('skills')} />
 
         {this.sectionHeader('education')}
-        <Education hidden={this.props.hidden.includes('education')} />
+        <Education hidden={this.props.pageState.hiddenSection.includes('education')} />
 
         {this.sectionHeader('contact')}
-        <Contact hidden={this.props.hidden.includes('contact')} />
+        <Contact hidden={this.props.pageState.hiddenSection.includes('contact')} />
 
         {this.sectionHeader('resume')}
         <p id="copyright">Dereje Getahun {'\u00A9'} 2018</p>

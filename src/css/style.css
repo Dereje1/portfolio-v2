@@ -31,6 +31,7 @@ body #App #Header .minor {
 }
 
 body #App #content {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -50,14 +51,6 @@ body #App #content {
   /* Opera 7 */
   word-wrap: break-word;
   /* IE */
-}
-
-body #App #content.top {
-  padding-top: 100px;
-}
-
-body #App #content h1 {
-  visibility: visible;
 }
 
 body #App #content .sectiondiv {
