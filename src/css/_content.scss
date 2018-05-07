@@ -32,6 +32,9 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.5s;
+    &.resume {
+      cursor: default;
+    }
     &:hover {
       background: rgba(73,39,74,0.35);
       color: #49274a;
@@ -43,6 +46,9 @@
           color: white;
       }
     }
+  }
+  .fa-download {
+    cursor: pointer;
   }
   .containers {
     background: rgba(206, 206, 206, 0.2);

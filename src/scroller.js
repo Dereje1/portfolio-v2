@@ -39,19 +39,19 @@ class Scroller extends Component {
           //already scrolled up(100 = section heading height, 75 main header height)
           this.props.hideByScroller(sectionName); //if already scrolled up just hide
         } 
-        /* modify more hiding clause below
-        if ((Math.abs(sectionBounding.top) < window.innerHeight)&&(sectionBounding.bottom<window.innerHeight)) {
-          //for closing sections that are already fully visible in viewport
-          this.props.hideByScroller(sectionName); //if already scrolled up just hide
-        } 
-        */
-        this.props.scrollTo(sectionName);
-
+        else if(sectionBounding.top > 200 && sectionBounding.height + 200 < window.innerHeight){
+          //console.log("contained in view Port!")
+          //console.log(sectionName,sectionBounding,window.innerHeight)
+          this.props.hideByScroller(sectionName);
+        }
+        else{
+          this.props.scrollTo(sectionName);
+        }
       }
 
     controlScroll (){
         if (this.props.pageState.hiddenSection.length === 5 || 
-            this.props.pageState.lastScrollTime > 2 || 
+            this.props.pageState.lastScrollTime > 50 || 
             this.props.pageState.yScroll[1]==="down") {
           return null;
         }

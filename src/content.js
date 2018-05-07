@@ -33,10 +33,13 @@ class Content extends Component {
       return (
         <div
           id={section}
-          className="sectiondiv"
-          onClick={()=>window.open("https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing")}
+          className="sectiondiv resume"
         >
           {section}
+          <i className="fa fa-download" aria-hidden="true"
+             title ="Download"
+             onClick={()=>window.open("https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing")}
+          />
         </div>
       );
     }

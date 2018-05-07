@@ -73,6 +73,10 @@ body #App #content .sectiondiv {
   transition: 0.5s;
 }
 
+body #App #content .sectiondiv.resume {
+  cursor: default;
+}
+
 body #App #content .sectiondiv:hover {
   background: rgba(73, 39, 74, 0.35);
   color: #49274a;
@@ -84,6 +88,10 @@ body #App #content .sectiondiv:hover {
     background: #49274a;
     color: white;
   }
+}
+
+body #App #content .fa-download {
+  cursor: pointer;
 }
 
 body #App #content .containers {
@@ -558,11 +566,12 @@ body #App #content #copyright {
 
 .scroller {
   position: fixed;
-  animation: scrollShow 0.75s linear 1;
+  animation: scrollShow 0.5s linear 1;
   bottom: 2px;
-  right: 2px;
+  right: 15%;
   font-size: 7rem;
-  color: rgba(139, 69, 26, 0.85);
+  opacity: .85;
+  color: #809eea;
 }
 
 .fadein {
