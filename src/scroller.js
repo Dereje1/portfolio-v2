@@ -51,7 +51,7 @@ class Scroller extends Component {
 
     controlScroll (){
         if (this.props.pageState.hiddenSection.length === 5 || 
-            this.props.pageState.lastScrollTime > 50 || 
+            this.props.pageState.lastScrollTime > 2 || 
             this.props.pageState.yScroll[1]==="down") {
           return null;
         }
