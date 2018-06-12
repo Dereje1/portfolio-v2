@@ -30,7 +30,7 @@ class Education extends Component {
         </div>
         <div className="schools">
           <div className="schooltitle">freeCodeCamp</div>
-          <div className="locdate"><a href="https://www.freecodecamp.org/Dereje1" target="_blank" rel="noopener noreferrer">Web</a> | Nov, 2017</div>
+          <div className="locdate"><a href="https://www.freecodecamp.org/dereje1" target="_blank" rel="noopener noreferrer">Web</a> | Nov, 2017</div>
           <div className="field">
             Full Stack Development Certification, Computer Software Engineering
           </div>
