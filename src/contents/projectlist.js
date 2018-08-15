@@ -4,6 +4,23 @@ const hostingMessageHeroku =
   'Demo hosted on free tier of heroku.com and may take up to 30 seconds to wake up';
 export const projectList = [
   {
+    id: 'pn3',
+    title: 'Multiplayer Tetris',
+    imgLink: './images/projects/tetris.png',
+    summary: 'A Multiplayer tetris game.',
+    details: [
+      'Developed single player tetris game from the ground up ',
+      'Used socket.io for multiplayer mode',
+      'Has 4 difficulty levels for multiplayer mode',
+      'Draws shapes with html canvas and implements a shape detection algorithm '
+        ],
+    projectLink: 'https://tetrisduel.herokuapp.com/',
+    githubLink: 'https://github.com/chingu-voyage6/Bears-Team-05/',
+    tags: ['Full Stack', 'React'],
+    icons: ['mongodb','express', 'react', 'nodejs'],
+    hosting: hostingMessageHeroku
+  },
+  {
     id: 'pn2',
     title: 'Cute or Not',
     imgLink: './images/projects/cuteornot.png',
