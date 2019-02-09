@@ -10,14 +10,14 @@ export const projectList = [
     summary: 'A Multiplayer tetris game.',
     details: [
       'Developed single player tetris game from the ground up ',
-      'Used socket.io for multiplayer mode',
+      'Uses socket.io for multiplayer mode',
       'Has 4 difficulty levels for multiplayer mode',
       'Draws shapes with html canvas and implements a shape detection algorithm '
         ],
-    projectLink: 'https://tetrisduel.herokuapp.com/',
-    githubLink: 'https://github.com/chingu-voyage6/Bears-Team-05/',
+    projectLink: 'https://multiplayer-tetris.herokuapp.com/',
+    githubLink: 'https://github.com/Dereje1/Multiplayer-Tetris',
     tags: ['Full Stack', 'React'],
-    icons: ['mongodb','express', 'react', 'nodejs'],
+    icons: ['socket','express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
   },
   {
