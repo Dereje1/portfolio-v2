@@ -10,15 +10,32 @@ export const projectList = [
     summary: 'A Multiplayer tetris game.',
     details: [
       'Developed single player tetris game from the ground up ',
-      'Uses socket.io for multiplayer mode',
-      'Has 4 difficulty levels for multiplayer mode',
-      'Draws shapes with html canvas and implements a shape detection algorithm '
+      'Shapes drawn with html canvas and detected with custom algorithm ',
+      'Uses custom socket.io design on server side ',
+      'Uses Redux to manage all client state including socket communications ',
         ],
     projectLink: 'https://multiplayer-tetris.herokuapp.com/',
     githubLink: 'https://github.com/Dereje1/Multiplayer-Tetris',
     tags: ['Full Stack', 'React'],
     icons: ['socket','express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
+  },
+  {
+    id: 'pn1',
+    title: 'Relative Strength',
+    imgLink: './images/projects/rstrength.png',
+    summary: 'Currency relative strength and news aggregator',
+    details: [
+      'Price data generated with AWS EC2 instance via MT4/mql4',
+      'News Data aggregated from forex factory\'s API',
+      'Node server processes all data and delivers JSON to client for consumption with react',
+      "Authenticated users able to enter, modify and close positions"
+    ],
+    projectLink: 'https://relative-strength.glitch.me/',
+    githubLink: 'https://github.com/Dereje1/RelativeStrength',
+    tags: ['Full Stack', 'React'],
+    icons: ['mongodb','express', 'react', 'nodejs'],
+    hosting: hostingMessageGlitch
   },
   {
     id: 'pn2',
@@ -37,22 +54,6 @@ export const projectList = [
     tags: ['Full Stack', 'React'],
     icons: ['mongodb','express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
-  },
-  {
-    id: 'pn1',
-    title: 'Relative Strength',
-    imgLink: './images/projects/rstrength.png',
-    summary: 'Currency relative strength and news aggregator',
-    details: [
-      'Currency price data generated every 15 minutes from AWS EC2 instance running MT4 (Oanda quotes)',
-      'High Impact News Data retrieved from forex factory',
-      'Node server processes Price and News data and delivers JSON to frontend for consumption with react'
-    ],
-    projectLink: 'https://relative-strength.glitch.me/',
-    githubLink: 'https://github.com/Dereje1/RelativeStrength',
-    tags: ['Full Stack', 'React'],
-    icons: ['express', 'react', 'nodejs'],
-    hosting: hostingMessageGlitch
   },
   {
     id: 'p1',
