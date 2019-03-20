@@ -9,10 +9,10 @@ export const projectList = [
     imgLink: './images/projects/tetris.png',
     summary: 'A Multiplayer tetris game.',
     details: [
-      'Developed single player tetris game from the ground up ',
-      'Shapes drawn with html canvas and detected with custom algorithm ',
-      'Uses custom socket.io design on server side ',
-      'Uses Redux to manage all client state including socket communications ',
+      'Wrote single player tetris game from scratch with custom shape detection algorithm on canvas',
+      'Uses custom socket.io design on server side for authenticated players to play in multi-mode',
+      'Redux state management, including for socket delivery ',
+      'Write single games and match data to mongodb '
         ],
     projectLink: 'https://multiplayer-tetris.herokuapp.com/',
     githubLink: 'https://github.com/Dereje1/Multiplayer-Tetris',

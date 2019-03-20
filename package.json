@@ -14,10 +14,10 @@
     "react-scroll": "^1.7.6"
   },
   "lint-staged": {
-      "src/**/*.{js,jsx,json,css,scss}": [
+    "src/**/*.{js,jsx,json,css,scss}": [
       "prettier --single-quote --write",
       "git add"
-      ]
+    ]
   },
   "scripts": {
     "predeploy": "npm run build",

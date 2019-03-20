@@ -38,7 +38,7 @@ class Content extends Component {
           {section}
           <i className="fa fa-download" aria-hidden="true"
              title ="Download"
-             onClick={()=>window.open("https://drive.google.com/file/d/1nqQ1IeXEBVQuVgxJSJfomNNjdmcT_cGe/view?usp=sharing")}
+             onClick={()=>window.open("https://drive.google.com/open?id=1_uVO0BdGDch4iK5ZU1gtnzwLr9DgXyRu")}
           />
         </div>
       );
@@ -82,15 +82,10 @@ class Content extends Component {
         <Contact hidden={this.props.pageState.hiddenSection.includes('contact')} />
 
         {this.sectionHeader('resume')}
-        <p id="copyright">Dereje Getahun {'\u00A9'} 2018</p>
+        <p id="copyright">Dereje Getahun {'\u00A9'} 2019</p>
       </div>
     );
   }
 }
 
 export default Content;
-
-/*
-<About hidden={this.state.hiddenSection.includes("about")}/>
-<Skills hidden={this.state.hiddenSection.includes("skills")}/>
-*/
