@@ -6,7 +6,7 @@ export const projectList = [
   {
     id: 'pn3',
     title: 'Multiplayer Tetris',
-    imgLink: './images/projects/tetris.png',
+    imgLink: './images/projects/tetris2.png',
     summary: 'A Multiplayer tetris game.',
     details: [
       'Wrote single player tetris game from scratch with custom shape detection algorithm on canvas',
