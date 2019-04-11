@@ -87,6 +87,7 @@ class Projects extends Component {
       return null;
     }
     const filterButtons = [
+      'High Light',
       'Full Stack',
       'Front End',
       'APIs & Microservices',

@@ -63,7 +63,10 @@ class Content extends Component {
         onClick={this.props.contract}
       >
         {this.sectionHeader('about')}
-        <About hidden={this.props.pageState.hiddenSection.includes('about')} />
+        <About 
+          hidden={this.props.pageState.hiddenSection.includes('about')} 
+          showContact={()=>this.props.sectionHide('contact')}
+        />
 
         {this.sectionHeader('projects')}
         <Projects

@@ -9,7 +9,7 @@ class App extends Component {
       scrollDist: 'about',
       lastScrollTime: 0,
       yScroll: [0,"down"],
-      projectFilter: ['Full Stack'],
+      projectFilter: ['High Light'],
       hiddenSection: ['about','skills', 'education', 'contact']
     };
   }

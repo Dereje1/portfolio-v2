@@ -12,21 +12,21 @@ class About extends Component {
       <div id="containAbout" className="fadein">
         <div className="aboutHolder">
           <p>
-            Hi, I am Dereje, a formally trained Mechanical Engineer, a
-            self-taught currency trader, an aspiring full stack web developer
+            Hi, I am Dereje, a formally trained Mechanical Engineer, 
+            currency trader, self-taught full stack web developer
             and a life-long learner living in Washington, DC.
           </p>
           <p>
             While I am primarily focused on finding web development solutions
-            using the MERN stack, I would also love to expand this focus to
-            include areas of machine learning and data science in the future.
+            using the MERN stack, I would also love to expand this focus and
+            integrate it into areas of machine learning and data science in
+            the future.
           </p>
           <p>
-            If you find that you can use any of the skills showcased in my
-            portfolio below, feel free to contact me. You can be assured of my
-            full commitment to use my extensive technical problem solving skills
-            to provide a web development solution that is custom fit to your
-            needs.
+            The portfolio below describes the skill set I have acquired in the
+            past few years while following my newly found passion of full stack 
+            web development, take a look and <a onClick={this.props.showContact} href='#contact'>contact</a> me if you feel like you can 
+            put some of these skills to use.
           </p>
         </div>
       </div>

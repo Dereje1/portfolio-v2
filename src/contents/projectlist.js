@@ -16,7 +16,7 @@ export const projectList = [
         ],
     projectLink: 'https://multiplayer-tetris.herokuapp.com/',
     githubLink: 'https://github.com/Dereje1/Multiplayer-Tetris',
-    tags: ['Full Stack', 'React'],
+    tags: ['Full Stack', 'React', 'High Light'],
     icons: ['socket','express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
   },
@@ -33,7 +33,7 @@ export const projectList = [
     ],
     projectLink: 'https://relative-strength.glitch.me/',
     githubLink: 'https://github.com/Dereje1/RelativeStrength',
-    tags: ['Full Stack', 'React'],
+    tags: ['Full Stack', 'React', 'High Light'],
     icons: ['mongodb','express', 'react', 'nodejs'],
     hosting: hostingMessageGlitch
   },
@@ -69,7 +69,7 @@ export const projectList = [
     ],
     projectLink: 'https://dereje-pclone.herokuapp.com/',
     githubLink: 'https://github.com/Dereje1/Pinterest-Clone',
-    tags: ['Full Stack', 'React'],
+    tags: ['Full Stack', 'React', 'High Light'],
     icons: ['mongodb', 'express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
   },
