@@ -59,16 +59,7 @@ class Projects extends Component {
   }
   filterProjects(pfilter) {
     //const filterButtons = ['Full Stack','Front End','APIs & Microservices','React','D3','jQuery']
-    let currentFilter = [...this.props.projectFilter];
-    if (currentFilter.includes(pfilter)) {
-      const indexOfFilter = currentFilter.findIndex(f => pfilter === f);
-      currentFilter = [
-        ...currentFilter.slice(0, indexOfFilter),
-        ...currentFilter.slice(indexOfFilter + 1)
-      ];
-    } else {
-      currentFilter = [...currentFilter, pfilter];
-    }
+    const currentFilter = this.props.projectFilter.includes(pfilter) ? ['High Light'] : [pfilter]
     /*
     const condition = (currentFilter.length===1)&&(currentFilter[0]===pfilter)
     if((!currentFilter.length)) {
@@ -104,7 +95,7 @@ class Projects extends Component {
             onClick={() => this.filterProjects(b, filterButtons)}
           >
             {' '}
-            {b} <i className="fa fa-times-circle" aria-hidden="true" />
+            {b} { b ==='High Light' ? null : <i className="fa fa-times-circle" aria-hidden="true" />}
           </button>
         );
       } else {
