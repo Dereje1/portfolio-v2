@@ -4,6 +4,41 @@ const hostingMessageHeroku =
   'Demo hosted on free tier of heroku.com and may take up to 30 seconds to wake up';
 export const projectList = [
   {
+    id: 'p1',
+    title: 'Pinterest Clone',
+    imgLink: './images/projects/pinterest.png',
+    summary: 'A basic clone of the pinterest application using the MERN stack.',
+    details: [
+      'authenticated users able to Pin, Save, Delete and add images',
+      'Unauthenticated users able to view all images',
+      'Upload pictures with links',
+      'Broken image handling with React',
+      'Uses react-masonry-component to handle picture layout'
+    ],
+    projectLink: 'https://dereje-pclone.herokuapp.com/',
+    githubLink: 'https://github.com/Dereje1/Pinterest-Clone',
+    tags: ['Full Stack', 'React', 'High Light'],
+    icons: ['mongodb', 'express', 'react', 'nodejs'],
+    hosting: hostingMessageHeroku
+  },
+  {
+    id: 'p17',
+    title: 'Game Of Life',
+    imgLink: './images/projects/gol.png',
+    summary: 'A react/canvas version of John conway\'s game of life',
+    details: [
+      'Able to change grid size and speed of generation',
+      'Will wrap new live cells created at the grid boundaries',
+      'Manually add/remove live cells',
+      'Play, pause and reset generations',
+      'Able to choose upto 8 patterns'
+    ],
+    projectLink: 'https://dereje1.github.io/game-of-life-v2/',
+    githubLink: 'https://github.com/Dereje1/game-of-life-v2',
+    tags: ['React', 'Front End', 'High Light'],
+    icons: ['react', 'canvas', 'MaterialUI']
+  },
+  {
     id: 'pn3',
     title: 'Multiplayer Tetris',
     imgLink: './images/projects/tetris2.png',
@@ -33,7 +68,7 @@ export const projectList = [
     ],
     projectLink: 'https://relative-strength.glitch.me/',
     githubLink: 'https://github.com/Dereje1/RelativeStrength',
-    tags: ['Full Stack', 'React', 'High Light'],
+    tags: ['Full Stack', 'React'],
     icons: ['mongodb','express', 'react', 'nodejs'],
     hosting: hostingMessageGlitch
   },
@@ -53,24 +88,6 @@ export const projectList = [
     githubLink: 'https://github.com/chingu-voyage4/Bears-Team-23',
     tags: ['Full Stack', 'React'],
     icons: ['mongodb','express', 'react', 'nodejs'],
-    hosting: hostingMessageHeroku
-  },
-  {
-    id: 'p1',
-    title: 'Pinterest Clone',
-    imgLink: './images/projects/pinterest.png',
-    summary: 'A basic clone of the pinterest application using the MERN stack.',
-    details: [
-      'authenticated users able to Pin, Save, Delete and add images',
-      'Unauthenticated users able to view all images',
-      'Upload pictures with links',
-      'Broken image handling with React',
-      'Uses react-masonry-component to handle picture layout'
-    ],
-    projectLink: 'https://dereje-pclone.herokuapp.com/',
-    githubLink: 'https://github.com/Dereje1/Pinterest-Clone',
-    tags: ['Full Stack', 'React', 'High Light'],
-    icons: ['mongodb', 'express', 'react', 'nodejs'],
     hosting: hostingMessageHeroku
   },
   {
@@ -310,23 +327,6 @@ export const projectList = [
     ],
     projectLink: 'https://dereje1.github.io/Roguelike/',
     githubLink: 'https://github.com/Dereje1/Roguelike',
-    tags: ['React', 'Front End'],
-    icons: ['javascript', 'react', 'bootstrap', 'sass']
-  },
-  {
-    id: 'p17',
-    title: 'Game Of Life',
-    imgLink: './images/projects/gol.png',
-    summary: 'A react version of John conways game of life',
-    details: [
-      'Able to change grid size and speed of generation',
-      'Will wrap new live cells created at the grid boundaries',
-      'can manually add live cells',
-      'play, pause and reset generations',
-      'Integrated setinterval with react state management'
-    ],
-    projectLink: 'https://dereje1.github.io/Game-Of-Life/',
-    githubLink: 'https://github.com/Dereje1/Game-Of-Life',
     tags: ['React', 'Front End'],
     icons: ['javascript', 'react', 'bootstrap', 'sass']
   },
