@@ -9,17 +9,16 @@ export const projectList = [
     imgLink: './images/projects/pinterest.png',
     summary: 'A basic clone of the pinterest application using the MERN stack.',
     details: [
-      'authenticated users able to Pin, Save, Delete and add images',
+      'Authenticated users able to pin / comment on images or add / delete new images',
       'Unauthenticated users able to view all images',
-      'Upload pictures with links',
-      'Broken image handling with React',
-      'Uses react-masonry-component to handle picture layout'
+      'Upload pictures with links or from file to S3',
+      'Able to View profiles of users',
+      'Uses Material UI and react-masonry-component to handle picture layout'
     ],
-    projectLink: 'https://dereje-pclone.herokuapp.com/',
+    projectLink: 'https://pinterest-clone-oct6.onrender.com/',
     githubLink: 'https://github.com/Dereje1/Pinterest-Clone',
     tags: ['Full Stack', 'React', 'High Light'],
     icons: ['mongodb', 'express', 'react', 'nodejs'],
-    hosting: hostingMessageHeroku
   },
   {
     id: 'p17',
@@ -49,7 +48,7 @@ export const projectList = [
       'Redux state management, including for socket delivery ',
       'Write single games and match data to mongodb '
         ],
-    projectLink: 'https://multiplayer-tetris.herokuapp.com/',
+    projectLink: 'https://multiplayer-tetris.onrender.com/',
     githubLink: 'https://github.com/Dereje1/Multiplayer-Tetris',
     tags: ['Full Stack', 'React', 'High Light'],
     icons: ['socket','express', 'react', 'nodejs'],
@@ -70,7 +69,7 @@ export const projectList = [
     githubLink: 'https://github.com/Dereje1/RelativeStrength',
     tags: ['Full Stack', 'React'],
     icons: ['mongodb','express', 'react', 'nodejs'],
-    hosting: hostingMessageGlitch
+    hosting: 'Demo hosted on free tier of render.com and may take up to 30 seconds to wake up'
   },
   {
     id: 'pn2',
